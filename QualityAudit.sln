@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "QualityAuditWeb", "QualityAuditWeb\", "{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{9d998be1-e542-4406-a9f3-ad3e5565439b}|FlowAgentBLL.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4138"
+		Debug.AspNetCompiler.PhysicalPath = "QualityAuditWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4138\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4138"
+		Release.AspNetCompiler.PhysicalPath = "QualityAuditWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4138\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4138"
+		SlnRelativePath = "QualityAuditWeb\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QualityAuditBLL", "QualityAuditBLL\QualityAuditBLL.csproj", "{9D998BE1-E542-4406-A9F3-AD3E5565439B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|x64.Build.0 = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Debug|x86.Build.0 = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|x64.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|x64.Build.0 = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|x86.ActiveCfg = Debug|Any CPU
+		{2033E34B-41B6-4E86-9F8F-C2E57A1BE839}.Release|x86.Build.0 = Debug|Any CPU
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|x64.ActiveCfg = Debug|x64
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|x64.Build.0 = Debug|x64
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|x86.ActiveCfg = Debug|x86
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Debug|x86.Build.0 = Debug|x86
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|x64.ActiveCfg = Release|x64
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|x64.Build.0 = Release|x64
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|x86.ActiveCfg = Release|x86
+		{9D998BE1-E542-4406-A9F3-AD3E5565439B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7472ABED-F4C9-4039-A88B-B0E61C42DAE7}
+	EndGlobalSection
+EndGlobal

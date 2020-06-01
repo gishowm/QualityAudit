@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "/!/QualityAuditBase.cshtml";
+}
+
+
+@section title{
+    这是标题
+}
+@section head{
+    <link href="/!/pack/layui/css/layui.css" rel="stylesheet" />
+    <script src="/!/pack/layui/layui.js"></script>
+}
+<script>
+    function gohref(){
+        location.href = "/views/index";
+    }
+</script>
+
+<button class="layui-btn layui-btn-danger" onclick="gohref()">Lay-btn</button>

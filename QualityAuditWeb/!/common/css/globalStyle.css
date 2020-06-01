@@ -1,0 +1,499 @@
+/*
+**    此文件影响全局样式,基于/user/...页面,修改后请检查全局样式!!!
+*/
+
+
+/*定义滚动条高宽及背景*/
+::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #f2f2f2;
+}
+/*定义滚动条轨道*/
+::-webkit-scrollbar-track
+{
+    background-color: #f2f2f2;
+}
+ 
+/*定义滑块 */
+::-webkit-scrollbar-thumb
+{
+    border-radius: 0;
+    background-color: #d4d4d4;
+}
+::-webkit-scrollbar-thumb:active {
+    background:#bbb;
+}
+/*-- /user/index --*/
+
+.maxIndex {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+}
+.layui-logo {
+    z-index:11;
+}
+.layui-layout-admin .layui-logo img {
+    height:36px;
+}
+.layui-nav .layui-nav-more {
+    border-color:#999 transparent transparent;
+}
+.layui-nav .layui-nav-mored, .layui-nav-itemed>a .layui-nav-more {
+    border-color:transparent transparent #999;
+}
+.userhoverpop {
+    color:#333;
+    padding:0 20px;
+}
+.userhoverpop h5 {
+    color:#333;
+    font-weight:bold;
+}
+.adminUserInfo {
+    width:auto;
+    min-width:240px;
+    right:0;
+    left:auto;
+}
+.adminUserInfo p::after {
+    display:none;
+}
+.moneyinfo {
+    vertical-align:middle;
+}
+.moneyinfo span {
+    vertical-align:middle;
+    display:inline-block;
+}
+.moneyinfo button {
+    vertical-align:middle;
+}
+.showmoneys {
+    min-width:90px;
+    font-size:12px;
+}
+.showmoneys font {
+    font-size:18px;
+    font-weight:bold;
+    margin-right:3px;
+}
+.adminright {
+    right:0;
+    top:0;
+    height:60px;
+    padding-left:200px;
+}
+.ainbtnbox {
+    float:left;
+    height:60px;
+    padding:0 20px;
+    position:relative;
+}
+.ainbtnbox::before {
+    content:'';
+    position:absolute;
+    left:0;
+    top:50%;
+    width:1px;
+    height:22px;
+    background:#000;
+    margin-top:-11px;
+}
+.navtts {
+    position: relative;
+    display: block;
+    padding-bottom:10px;
+    margin-top:15px;
+    padding-left:15px;
+    padding-right:15px;
+    border-top:1px solid #2e3344;
+}
+.navtts>span {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color:#999;
+    font-size:12px;
+}
+.leftnav li img {
+    margin-right:5px;
+    width:20px;
+    opacity:0.5;
+}
+.leftnav li.layui-this img {
+    opacity:1;
+}
+.show-nav {
+    position:fixed;
+    right:0;
+    top:60px;
+    left:200px;
+    z-index:11;
+    background:#fff;
+    box-shadow:0 2px 3px rgba(0,0,0,0.1);
+    border-bottom:0;
+}
+.maxIndex .layui-layout-admin .layui-body {
+    margin:0;
+    bottom:0;
+    padding-top:40px;
+}
+.layui-tab-content{
+    padding:0;
+}
+.show-nav.layui-tab-title li::after {
+    border:0 !important;
+}
+.show-nav.layui-tab-title li:hover {
+    background:#f6f6f6;
+}
+.show-nav.layui-tab-title .layui-this {
+    background:#f6f6f6;
+}
+.show-nav.layui-tab-title li::before {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:0%;
+    background:#333;
+    height:2px;
+    transition:0.3s;
+}
+.show-nav.layui-tab-title .layui-this::before {
+    width:100%;
+    left:0;
+}
+#indexcenter i {
+    display:none;
+}
+.showbody {
+    height:100%;
+    overflow:hidden;
+}
+.showbody .layui-tab-item {
+    height:100%;
+    position:relative;
+    z-index:2;
+}
+.showbody iframe {
+    width:100%;
+    height:100%;
+    border:0;
+    outline:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+.loading {
+    position:fixed;
+    width:100%;
+    padding:0 15px;
+    line-height:2em;
+}
+#indexcenter {
+    min-width:initial;
+}
+.btn-reduce {
+    position:fixed;
+    bottom:20px;
+    height:36px;
+    background:#393D49;
+    width:36px;
+    text-align:center;
+    line-height:36px;
+    border-radius:50%;
+    box-shadow:0 0 12px rgba(0,0,0,1);
+    left:144px;
+    z-index:11;
+}
+.btn-reduce button {
+    border:0;
+    background:none;
+    color:#ccc;
+    cursor:pointer;
+    width:100%;
+    line-height:36px;
+    border-radius:50%;
+}
+.btn-reduce button:active {
+    background:#212430;
+}
+.maxshowIndex .layui-nav .layui-nav-item a {
+    -webkit-transition:all 0s;
+    transition:all 0s;
+}
+.maxshowIndex .layui-layout-admin .layui-side{
+    width:60px;
+}
+.maxshowIndex .layui-side-scroll {
+    width:100%;
+}
+.maxshowIndex .layui-nav-tree {
+    width:100%;
+}
+.maxshowIndex .layui-nav-tree .layui-nav-item a {
+    padding:0;
+    font-size:0;
+    text-align:center;
+    width:100%;
+}
+.maxshowIndex .layui-nav-tree .layui-nav-item a i {
+    font-size:0;
+}
+.maxshowIndex nav .layui-nav-bar {
+    display:none;
+}
+.maxshowIndex .navtts span{
+    font-size:0;
+    padding:0;
+}
+.maxshowIndex .layui-body,.maxshowIndex .show-nav {
+    left:60px;
+}
+.maxshowIndex .btn-reduce {
+    left:65px;
+}
+.maxshowIndex .btn-reduce .layui-icon-shrink-right:before {
+    content:"\e66b";
+}
+.layui-input:focus {
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+.hins {
+    height:100%;
+    text-align:right;
+    padding:15px 20px;
+    color:#fff;
+}
+.hins a {
+    color:#fff;
+}
+/*收费标准*/
+.switbtn {
+    color: rgba(2,38,35,0.6);
+    background: #e7eeee;
+    border-bottom: 1px solid #00b9ad;
+    height: 50px;
+    padding-left: 30px;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+.switbtn li {
+    float: left;
+    cursor: pointer;
+    height: 42px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    line-height: 42px;
+}
+.switbtn li.active{
+    border: 1px solid #00b9ad;
+    border-bottom: 1px solid #fff;
+    color: #00b9ad;
+    background: #fff;
+}
+.swiconts {
+    padding: 20px 30px;
+}
+.text-p {
+    color: #022623;
+    font-size: 16px;
+}
+.Serial {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #009688;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 13px;
+}
+.stepCon {
+    padding: 14px 0 20px 30px;
+}
+.stepCon .layui-table th {
+    background: rgba(137,207,240,.2);
+}
+.v1s {
+    position: absolute;
+    left: 10px;
+    bottom: 2px;
+}
+.v2s {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+.thids:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    transform: rotate(10deg);
+}
+
+/*-- /task/index --*/
+.initcontent {
+    position:relative;
+}
+.initTitle {
+    padding:0 15px;
+}
+.initTitle h2 {
+    font-size: 20px;
+    line-height: 2.5em;
+    padding: 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+.initcontent .layui-form {
+    padding:15px;
+}
+.bico i.layui-icon{
+    vertical-align:middle;
+}
+.typeselect {
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+}
+.typeselect li {
+    float:left;
+    height:36px;
+    line-height:36px;
+    padding:0 15px;
+    cursor:pointer;
+    background:#e9e9e9;
+    margin-right:15px;
+    transition:0.3s;
+    margin-bottom:5px;
+}
+.typeselect li:last-child {
+    margin-right:0;
+}
+.typeselect li i {
+    margin-right:5px;
+}
+.typeselect li:hover {
+    background:#e1e1e1;
+}
+.typeselect li:active {
+    background:#eee;
+}
+.typeselect li.layui-this {
+    background:#5FB878;
+    color:#fff;
+}
+.bico:hover {
+    border-color:#999;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+.lTotalMoney {
+    line-height:28px;
+    display:inline-block;
+    padding:10px 10px 0;
+    vertical-align:bottom;
+    font-size:14px;
+}
+.lTotalMoney #totalmoney {
+    color:#f05050;
+    font-size:26px;
+    font-weight:bold;
+    margin-left:4px;
+    vertical-align:bottom;
+    line-height:34px;
+}
+#menu {
+	width: 120px;
+	height: auto;
+	overflow: hidden;
+ /*隐藏溢出的元素*/
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	position: absolute;
+ /*自定义菜单相对与body元素进行定位*/
+	z-index: 99999;
+	background: #fff;
+	padding: 5px 0;
+    display:none;
+}
+.cssing dd {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    cursor:pointer;
+    transition:0.3s;
+}
+.cssing dd:hover {
+    background:#eee;
+}
+
+
+/* user/center */
+.usercenter {
+    padding:15px 15px;
+}
+.usercenter .panel-footer {
+    padding:0 15px;
+}
+
+
+/* 任务发布 */
+.initcontent .layui-form-item .layui-input-inline.vw1 {
+    width:230px;
+}
+
+@media (min-width: 768px) {
+    .layui-layout-admin .layui-side {
+        display:block !important;
+    }
+}
+
+.dianpu .bk {
+    padding: 70px 0 10px 0; 
+}
+.dianpu .shopname{
+    display: block; 
+    text-align: center; 
+    font-size: 20px; 
+    font-weight: bold;
+    padding-bottom:10px;
+}
+.dianpu .bdtime {
+    color:#EEE; 
+    display: block; 
+    padding:0 5px;
+    text-align: center; 
+}
+.success-box {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    margin-top: -75px;
+    height: 150px;
+    text-align: center;
+    width: 100%;
+}
+.title-success {
+    line-height: 2em;
+    font-size:28px;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.toHref {
+    line-height: 28px;
+    margin:6px 0 0;
+    display:inline-block;
+    vertical-align:top;
+}

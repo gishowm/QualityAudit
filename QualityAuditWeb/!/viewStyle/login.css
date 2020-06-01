@@ -1,0 +1,511 @@
+
+.logobox {
+    height: 100px;
+    width: 100px;
+    margin: 40px auto;
+    background-position: center;
+    background-image: url(/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.box {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 0 auto 60px;
+    background: #fff;
+    /* position: absolute !important; */
+    /*right: 0;
+    top: 50%;*/
+    /* transform: translateY(-50%);*/
+    margin: auto;
+}
+@media screen and (min-width: 1024px) {
+    .box {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .box {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .box {
+        max-width: 360px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .box {
+        max-width: 310px;
+    }
+} 
+
+
+.pr20 {
+    padding-right: 20px;
+    line-height: 3em;
+}
+
+.text-1 {
+    margin-bottom: 20px;
+}
+
+.boxlogo {
+    margin-top: 130px;
+    padding-bottom: 60px;
+    height: 121px;
+    text-align: center;
+}
+
+    .boxlogo img {
+        height: 100%;
+        width: auto;
+    }
+
+.footerping {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+}
+
+.bgbox {
+    height: 100%;
+    background-color: #1F2325;
+    background-size: cover;
+    background-image: url(/images/login_bg.jpg);
+    overflow: hidden;
+}
+
+.box {
+    position: relative;
+    z-index: 2;
+/*    margin: 5px;*/
+}
+
+.signin {
+    float: right;
+}
+
+.login {
+    max-width: 400px;
+    padding: 25px 8px;
+}
+
+.title_p {
+    font-size: 30px;
+    color: #FFFFFF;
+    line-height: 36px;
+    margin-bottom: 19px;
+    font-weight: bold;
+}
+
+
+.login_ul li {
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.47px;
+    line-height: 30px;
+}
+
+.form_login {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 375px;
+}
+
+.m-t {
+    margin-top: 15px;
+}
+
+.button {
+    color: #fff;
+    background-color: #2a83ff;
+    border-color: #2a83ff;
+    height: 45px;
+    border: none;
+}
+
+    .button:focus {
+        color: #fff;
+    }
+
+    .button:hover, .button:active {
+        color: #fff;
+        background-color: #2476c8;
+        border-color: #2476c8;
+    }
+
+
+.user {
+    position: relative;
+}
+
+    .user .container {
+        width: 1000px;
+        min-width: 1000px;
+    }
+
+    .user .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .user .icon-users {
+        background-position: 0 -150px;
+    }
+
+    .user .icon-user {
+        background-position: -35px -150px;
+    }
+
+    .user .user-title {
+        font-size: 25px;
+        color: #555;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    .user .title {
+        margin: 50px 0 10px 0;
+        font-size: 22px;
+        color: #444;
+    }
+
+        .user .title * {
+            vertical-align: text-bottom;
+        }
+
+        .user .title .en {
+            font-size: 17px;
+        }
+
+    .user .service {
+        background-color: #efefef;
+        margin-bottom: 50px;
+    }
+
+        .user .service .trait {
+            text-align: center;
+            margin: 40px 5px 30px 5px;
+            color: #666;
+        }
+
+            .user .service .trait .icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .user .service .trait .icon-vip {
+                background-position: 0 -185px;
+            }
+
+            .user .service .trait .icon-mouse {
+                background-position: -40px -185px;
+            }
+
+            .user .service .trait .icon-shield {
+                background-position: -80px -185px;
+            }
+
+            .user .service .trait .icon-aim {
+                background-position: -120px -185px;
+            }
+
+        .user .service ul li {
+            color: #666;
+            line-height: 200%;
+        }
+
+    .user .controls {
+        position: absolute;
+        top: -30px;
+        width: 100%;
+        min-width: 1200px;
+    }
+
+        .user .controls .box {
+            position: absolute;
+            left: 50%;
+            margin-left: 100px;
+            background-color: #fff;
+            width: 450px;
+            padding: 10px 30px;
+            margin-top: 30px;
+        }
+
+            .user .controls .box form {
+                padding: 20px;
+            }
+
+            .user .controls .box .form-group {
+                height: 59px;
+                margin-bottom: 5px;
+            }
+
+            .user .controls .box .form-error {
+                margin-left: 15px;
+            }
+
+                .user .controls .box .form-error .help-block {
+                    font-size: 12px;
+                }
+
+            .user .controls .box img {
+                margin-bottom: 30px;
+            }
+
+            .user .controls .box .input-name {
+                background: url("/images/input_ico.png") no-repeat 325px -3px;
+            }
+
+            .user .controls .box .input-password {
+                background: url("/images/input_ico.png") no-repeat 325px -42px;
+            }
+
+            .user .controls .box .input-code {
+                background: url("/images/input_ico.png") no-repeat 320px -79px;
+            }
+
+        .user .controls .modal-content {
+            min-height: 60px;
+        }
+
+        .user .controls .forget-dialog {
+            padding: 5px 100px;
+            text-align: left;
+            min-height: 300px;
+        }
+
+            .user .controls .forget-dialog input[type=text], .user .controls .forget-dialog input[type=password] {
+                background-color: #fff;
+            }
+
+            .user .controls .forget-dialog .resend {
+                text-align: right;
+                margin: 5px auto 40px auto;
+                padding-bottom: 5px;
+            }
+
+                .user .controls .forget-dialog .resend a {
+                    color: #aaa;
+                    font-size: 12px;
+                }
+
+.user-footer .copy {
+    background: transparent;
+}
+
+.actiDiv {
+    position: relative;
+    height: 80px;
+}
+
+    .actiDiv .closeAd {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    .actiDiv .D_ads {
+        width: 100%;
+        display: inline-block;
+        height: 80px;
+        background: url("/images/site_top_banner.png") no-repeat center center;
+    }
+
+.actdayDiv .D_ads {
+    background: url("/images/count_down_site_top_banner.png") no-repeat center center;
+}
+
+.adsPopDiv {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+    .adsPopDiv .imgAd {
+        background: #f99;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -400px;
+        margin-top: -225px;
+    }
+
+    .adsPopDiv .closeAd {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        opacity: .7;
+    }
+
+.sendBtn {
+    float: right;
+    width: 110px;
+    height: 34px;
+    border: 1px solid #39f;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #39f;
+    padding: 0;
+    background: #fff;
+}
+
+.whiteBtn:hover {
+    background: #f8f8f8 !important;
+    color: #39f !important;
+}
+
+.whiteBtn:active {
+    background: #f2f2f2 !important;
+    color: #39f !important;
+}
+
+.downLoadTip {
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #fff3d4;
+    font-size: 18px;
+    color: red;
+}
+
+#tipModal .modal-body {
+    padding: 0;
+}
+
+#tipModal .popActTip {
+    position: relative;
+}
+
+    #tipModal .popActTip .regGet {
+        width: 245px;
+        height: 50px;
+        position: absolute;
+        bottom: 34px;
+        left: 269px;
+        cursor: pointer;
+    }
+
+
+#deanheader {
+    position: relative !important;
+}
+
+.scanning {
+    width: 140px;
+    height: 390px;
+    position: absolute;
+    top: 35%;
+    left: 24%;
+    margin-top: -195px;
+    background: url("/images/scan.png") no-repeat center;
+    background-size: 100%;
+    opacity: 0.4;
+    z-index: 3;
+}
+
+.pvimg {
+    position: absolute;
+    left: 0;
+    top: 44%;
+    width: 722px;
+    height: 412px;
+    margin-top: -206px;
+    margin-left: -80px;
+}
+
+.hn1 {
+    font-size: 30px;
+    position: absolute;
+    left: 250px;
+    top: 106px;
+    text-align: left;
+    z-index: 5;
+    color: #3a91e8;
+    -webkit-animation: sng 1.2s 1 ease;
+}
+
+.hn2 {
+    font-size: 18px;
+    position: absolute;
+    left: -80px;
+    bottom: 30px;
+    text-align: left;
+    width: 722px;
+    text-align: center;
+    z-index: 5;
+    color: #3a91e8;
+    -webkit-animation: sng 1.2s 1 ease;
+}
+
+.form-error {
+    color: red;
+}
+
+.deanfooter {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.Rotation {
+    -webkit-transform: rotate(360deg);
+    animation: rotation 3s linear infinite;
+    -moz-animation: rotation 3s linear infinite;
+    -webkit-animation: rotation 3s linear infinite;
+    -o-animation: rotation 3s linear infinite;
+}
+
+@-webkit-keyframes sng {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+#container {
+    background: #efefef;
+    padding-top: 30px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}

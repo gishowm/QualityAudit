@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "/!/FlowAgentBase.cshtml";
+}
+@section title{
+    <meta name="description" content="51流量神器是一款专业为店铺引流,增加人气权重的软件,用于快速提升网店流量,网店访问量和宝贝人气推广、电商运营、网络营销必备的免费流量推广利器!">
+    <meta name="keywords" content="流量神器，51流量神器，淘宝流量，天猫流量，京东流量，拼多多流量，APP流量">
+}
+@section head{
+    <style>
+        .deanfooter {
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+        }
+        .a-404 {
+            position:fixed;
+            left:0;
+            top:40%;
+            width:100%;
+            transform:translateY(-50%);
+        }
+        .a-404 h2 {
+            margin-bottom:6px;
+            font-family:Bahnschrift;
+            font-size:60px;
+        }
+        .a-404 h4 {
+            font-size:20px;
+        }
+    </style>
+}
+
+<div class="text-center a-404">
+    <h2 id="eCode">404</h2>
+    <h4 id="eInfo">哎呀，页面找不到了~</h4>
+    <br />
+    <a href="/" class="btn btn-info btn-sm" id="backIndex">返回首页</a>
+    <a href="javascript:;" onclick="javascript: history.back();" class="btn btn-success btn-sm">刷新页面</a>
+</div>
+
+<script>
+    {
+        let pathUrl = window.location.search,
+            sPara = 'ErrorCode' + '=',
+            nPosition = pathUrl.lastIndexOf(sPara) + sPara.length, //查找字符串位置
+            nErrorCode = pathUrl.substring(nPosition) || 404, //查找http状态码
+            oErrorText = document.getElementById('eCode'),
+            oErrorInfo = document.getElementById('eInfo');
+
+        oErrorText.innerText = nErrorCode;
+
+        switch (nErrorCode.substring(0, 1)) {
+            case '3':
+                oErrorInfo.innerHTML = '页面移到新的地址了~'
+                break;
+            case '4':
+                oErrorInfo.innerHTML = '哎呀，页面飞到外太空了~'
+                break;
+            case '5': 
+            default:
+                oErrorInfo.innerHTML = 'Sorry，服务器发生了未知错误~'
+                break;
+
+        }
+
+        let oBackIndex = document.getElementById('backIndex');
+        if(self != top){
+            oBackIndex.style.display = 'none';
+        }
+    }
+</script>

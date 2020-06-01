@@ -1,0 +1,284 @@
+﻿@inherits FlowAgentBLL.login
+@{
+    Layout = "/!/FlowAgentBase.cshtml";
+}
+@section title{
+    <title>商家注册</title>
+}
+@section head{
+    <link href="/!/viewStyle/login.css" rel="stylesheet" />
+
+    <script>
+
+        document.domain = location.host.substr(-20);
+    </script>
+
+}
+
+<style>
+    .box {
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        margin: 0 auto 60px;
+        width: 400px;
+        background: #fff;
+        position: absolute !important;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .pr20 {
+        padding-right: 20px;
+        line-height: 3em;
+    }
+
+    .text-1 {
+        display:flex;
+        align-items:center;
+        margin-bottom: 15px;
+        border:1px solid #d2d2d2;
+    }
+
+    .boxlogo {
+        margin-top: 130px;
+        padding-bottom: 60px;
+        height: 121px;
+        text-align: center;
+    }
+
+        .boxlogo img {
+            height: 100%;
+            width: auto;
+        }
+
+    .footerping {
+        position: fixed;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+        color:#ccc;
+    }
+
+    .bgbox {
+        height: 100%;
+        background: url(/images/login_bg.jpg);
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .box {
+        position: relative;
+        z-index: 2;
+    }
+
+    .signin {
+        float: right;
+    }
+
+    .register {
+        width: 400px;
+    }
+    .text-1>label{
+        display:block;
+        width:70px;
+        height:100%;
+        line-height:38px;
+        text-align:center;
+    }
+    .text-1>input{
+        width:calc(100% - 70px);
+        border:none;
+    }
+    /*.text-right > a {
+        padding: 5px 0px 5px 20px;
+    }*/
+    .title_p {
+        font-size: 30px;
+        color: #FFFFFF;
+        line-height: 36px;
+        margin-bottom: 19px;
+        font-weight: bold;
+    }
+
+    .text_box_l {
+        width: 400px;
+        min-height: 429px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .login_ul li {
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0.47px;
+        line-height: 30px;
+    }
+
+    .form_register {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 429px;
+    }
+</style>
+
+<div class="user bgbox">
+    <div class="boxlogo"><img src="@(FlowAgentBLL.Config.DomainInfo.tryS("logo"))" /></div>
+    <div class="form_register">
+        <div class="text_box_l">
+            <p class="title_p">商家注册</p>
+            <ul class="login_ul">
+                <li>我们提供电商流量、回访流量、高端流量</li>
+                <li>我们的优势：真实流量、支持多端口、高端流量</li>
+                <li>专业客服团队7*15小时专业服务，QQ、微信公众号、短信等多种服务方式</li>
+            </ul>
+        </div>
+        <div class="box">
+            <div class="register">
+                <div class="en text-right pr20"><a href="/registerVip">会员注册</a>@*<a href="/registerMe">商家注册</a>*@</div>
+                <div class="text-center user-title">
+                    商家注册
+                </div>
+                <div style="padding:20px;">
+                    <div id="form" class="layui-form-item">
+                        <div class="text-1">
+                            <label>账号</label>
+                            <input placeholder="请输入用户名" id="" name="account" class="layui-input input-name" type="text" title="请输入用户名" autocomplete="off">
+                        </div>
+                        <div class="text-1">
+                            <label>QQ</label>
+                            <input placeholder="请输入QQ" id="" name="QQ" class="layui-input input-name" type="text" title="请输入QQ" autocomplete="off">
+                        </div>
+
+
+                        <div class="text-1">
+                            <label>手机</label>
+                            <input placeholder="请输入手机" id="" name="phonenumber" class="layui-input input-name" type="text" title="请输入手机" autocomplete="off">
+                        </div>
+                        <input style="width:30%; height:40px; float:right; background-color: #282d30 !important; border:none !important; cursor: pointer;" value="获取验证码" type="button" class="button timeCode" onclick="getCode()">
+                        <div class="text-1">
+                            <label>验证码</label>
+                            <input placeholder="请注意查收你的手机短信" name="code" class="layui-input input-code" type="text" title="请注意查收你的手机短信" autocomplete="off">
+                        </div>
+
+
+                        <div class="text-1">
+                            <label>密码</label>
+                            <input placeholder="密码由6-18位英文、数字或下划线组成！" name="pass" class="layui-input input-password" type="password" title="密码由6-18位英文、数字或下划线组成！" autocomplete="off">
+                        </div>
+                        <div class="text-1">
+                            <label>确认密码</label>
+                            <input placeholder="请再次输入密码" name="repass" class="layui-input input-password" type="password" title="请再次输入密码" autocomplete="off">
+                        </div>
+                        <a class="signin" href="/login">已有账号，去登陆</a>
+                        <div>
+                            <input style="width: 100%; background-color: #282d30 !important; border-color: #282d30 !important; cursor: pointer;" value="立即注册" id="submit_0" class="btn button btn-lg m-t" data-submit-mode="normal" name="submit_0" onclick="Mrlogin()" type="button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="forgetPasswordDialog" class="modal fade in">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div data-container-type="zone" id="forgetPasswordDialogZone"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerping">
+        <p>Copyright©2010-2017 All Rights Reserved.@Core.Config.getPartnerInfo().tryS("websiteName")</p>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        localStorage.setItem('ref', uap.request("ref") ? uap.request("ref") : null);
+    })
+    function Mrlogin() {
+        var data = uap.form().getData();
+        if (check(data)) {
+            uap.action("register", { account: data.account, password: data.pass, QQnumber: data.QQ, inviter: localStorage.getItem("ref"), phonenumber: data.phonenumber, code: data.code }, function (s) {
+                if (s != "ok") return uap.tips({ s: s, face: 3 });
+                location.href = "/user/index?#newuser=true";
+                var oIfSrc = parent.$ ? parent.$('.showbody .layui-tab-item.layui-show iframe') : false;
+                if (self != top && oIfSrc) {
+                    return location.href = oIfSrc.attr('src');
+                }
+                top.location.href = unescape(uap.request("initPage")) ? "/user/index?initPage=" + unescape(uap.request("initPage")) : "/user/index";
+            });
+        }
+    }
+    function check(data) {
+        if (!data.account) {
+            layer.msg("请输入登录账号");
+            return false;
+        }
+        if (!data.QQ) {
+            layer.msg("请输入QQ");
+            return false;
+        }
+        if (!data.phonenumber) {
+            layer.msg("请输入手机号码");
+            return false;
+        }
+        if (!data.pass) {
+            layer.msg("请输入密码");
+            return false;
+        }
+        if (data.pass != data.repass) {
+            layer.msg("两次输入密码不相同");
+            return false;
+        }
+        if (!data.code) {
+            layer.msg("请输入手机号验证码");
+            return false;
+        }
+        return true;
+    }
+
+    window.onkeydown = function () {
+        event.keyCode == 13 ? Mrlogin() : false;
+    };
+
+
+
+    var istime = true;
+    //验证邮箱账户
+    function getCode() {
+        if (!istime) return layer.msg("请稍后再试");
+        var data = uap.form().getData();
+        if (!data.phonenumber) {
+            layer.msg('请输入手机号码');
+            return false;
+        }
+        if (!(/^1[3456789]\d{9}$/.test(data.phonenumber))) {
+            layer.msg("手机号码有误，请重填");
+            return false;
+        } 
+        uap.action('getCode', { phonenumber: data.phonenumber }, function (v) {
+            if (v != "ok") return layer.msg(v);
+
+            countDown($($(".timeCode")), 30);
+            return layer.msg('验证码已发送至您的手机，请注意查收!', {
+                icon: 1,
+                time: 2000
+            }, function () {
+                //do something
+            });
+        });
+    }
+
+    //获取验证码倒计时
+    function countDown(a, n) {//a:DOM节点,n:倒数秒数
+        istime = false;
+        a.val('重新获取(' + n + ')');
+        var times = setTimeout(changetime, 1000);
+        function changetime() {
+            if (n > 0) { n--; a.val('重新获取(' + n + ')'); times = setTimeout(changetime, 1000); } else { clearTimeout(times); a.val("重新获取"); istime = true; }
+        }
+    }
+</script>

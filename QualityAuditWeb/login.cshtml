@@ -1,0 +1,124 @@
+﻿@inherits QualityAuditBLL.Login
+@{
+    Layout = "/!/QualityAuditBase.cshtml";
+}
+@section title{
+    用户登录
+}
+@section head{
+    <link href="/!/viewStyle/login.css?time=20190723" rel="stylesheet" />
+
+    <link href="/!/pack/layui/css/layui.css" rel="stylesheet" />
+
+    <script src="/!/pack/layui/layui.js"></script>
+
+    <script>
+        if (location.hostname != 'localhost') {
+            document.domain = location.host.substr(-20);
+        }
+    </script>
+
+}
+
+
+
+<div class="user bgbox">
+    <div class="form_login">
+        <div class="logobox">
+            @*<img src="/images/logo.jpg" />*@
+        </div>
+        <div class="box">
+            <div class="login">
+                <div class="text-center user-title">
+                    品质稽核系统登录
+                </div>
+                <div style="padding:20px;">
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            @*<div class="layui-input">*@
+                            <select name="FactoryName" lay-verify="required">
+                                <option value="">请选择厂区</option>
+                                <option value="0">北京</option>
+                                <option value="1">上海</option>
+                                <option value="2">广州</option>
+                                <option value="3">深圳</option>
+                                <option value="4">杭州</option>
+                            </select>
+                        </div>
+                        @*</div>*@
+                    </div>
+                    <div id="form" class="layui-form-item">
+
+                        <div class="text-1">
+                            <input placeholder="请输入用户名" onfocus="inputing()" data-min-length-message="用户名长度不少于5位" data-validate-min-length="5" data-required-message="必须填写用户名"
+                                   data-optionality="required" data-validation="true" id="name" class="layui-input input-name" name="account" type="text">
+                        </div>
+                        <div class="text-1">
+                            <input placeholder="请输入登录密码" onfocus="inputing()" data-min-length-message="密码长度不少于6位" data-validate-min-length="6"
+                                   data-required-message="必须填写密码" data-optionality="required" data-validation="true" value="" id="password" name="pass"
+                                   class="layui-input input-password" type="password">
+                            <div class="form-error"><p data-error-block-for="password" class="help-block invisible"></p></div>
+                        </div>
+                        <div>
+                            <input style="width: 100%; background-color: #282d30 !important; border-color: #282d30 !important; cursor: pointer; " value="立即登录" id="submit_0" class="btn button btn-lg m-t" data-submit-mode="normal" name="submit_0" onclick="Mrlogin()" type="button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="forgetPasswordDialog" class="modal fade in">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div data-container-type="zone" id="forgetPasswordDialogZone"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'form', 'table', 'carousel', 'upload', 'element', 'slider'], function () {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            , layer = layui.layer //弹层
+            , table = layui.table //表格
+            , carousel = layui.carousel //轮播
+            , upload = layui.upload //上传
+            , element = layui.element //元素操作
+            , slider = layui.slider //滑块
+            , form = layui.form //滑块
+    });
+
+    function Mrlogin() {
+        var data = uap.form().getData();
+        if (check(data)) {
+            uap.action("doLogin", { LoginName: data.account, Password: data.pass, FactoryName: data.FactoryName }, function (s) {
+                if (s != "ok") return layer.msg(s || "登录失败！");
+                location.href = "/user/index";
+            });
+        }
+    }
+
+    function inputing() {
+        $(".form-error").text("");
+    }
+    function check(data) {
+        if (!data.FactoryName) {
+            layer.msg('请选择厂区');
+            return false;
+        }
+        if (!data.account) {
+            layer.msg('请输入登录账号');
+            return false;
+        }
+        if (!data.pass) {
+            layer.msg('请输入密码');
+            return false;
+        }
+        return true;
+    }
+</script>
